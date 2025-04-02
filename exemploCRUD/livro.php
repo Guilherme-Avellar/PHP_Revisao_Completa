@@ -8,6 +8,30 @@
 // para pegar apenas o id do livro:
 $id = $_REQUEST["id"];
 
+// importa o arquivo dados.php, que tem os livros
+require 'dados.php';
+
+/*
+// se quiser ver detalhadamente
+echo "<pre>"; // esse <pre> motra uma pre-visualização de algo, parecido com pseudo-código
+var_dump($livros); // pega o vetor livros de dados.php, os arquivos estão se comunicando
+// var_dump($_SERVER) // se quiser ver todas informações do servidor, pode haver algo útil
+echo "</pre>";
+*/
+
+// filtrando a variavel $livros para a variavel $filtrado
+$filtrado = array_filter($livros, function($l) use($id) {
+    return $l["id"] == $id; // linha 9
+});
+// obs: esse use() é uma funcionalidade especifica de funções anonimas do php,
+// é usado para importar variaveis do escopo externo para dentro da função
+
+// passando o primeiro elemento para a variavel $livro (SEM O S), pois o 
+// array_filter retorna um array
+$livro = array_pop($filtrado); 
+// array_pop() remove o último elemento de um array e o retorna, como só tem um elemento,
+// ele pega o unico elemento e remove de filtrado. Isso evita erros pois se filtrado estiver
+// vazio ele retorna null
 
 ?>
 
@@ -43,7 +67,23 @@ $id = $_REQUEST["id"];
 
     <main class="mx-auto max-w-screen-lg space-y-6">
 
-        id do livro: <?= $id?>
+        <?= $livro['titulo']?>
+        <div class="p-2 rounded border-stone-800 border-2 bg-stone-900">
+            <div class="flex">
+                <div class="w-1/3">imagem</div>
+
+                <div class="space-y-1">
+                    <a href="/livro.php?id=<?=$livro["id"]?>" class="font-semibold hover:underline"><?=$livro["titulo"]?></a>
+                    <div class="text-xs italic"><?=$livro["autor"]?></div>
+                    <div class="text-xs italic">⭐⭐⭐⭐⭐(3 Avaliações)</div>
+                </div>
+
+            </div>
+
+            <div class="text-sm mt-2">
+                <?=$livro["descricao"]?>
+            </div>
+        </div>
     </main>
 </body>
 </html>
