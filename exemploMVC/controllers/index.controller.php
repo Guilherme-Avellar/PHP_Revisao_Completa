@@ -10,7 +10,7 @@ require 'dados.php';
 // require "views/template/app.php";
 
 // refatorando linha 6-10
-view('livros', ['index' => $livros]); // chama uma função que faz o mesmo
+view('index', ['livros' => $livros]); // chama uma função que faz o mesmo
 
 // o paremetro ['livro' => $livro]
 
