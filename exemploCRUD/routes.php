@@ -11,29 +11,22 @@ if(isset($_SERVER["PATH_INFO"])) {
 
 //dd($_SERVER, parse_url($_SERVER['REQUEST_URI']));
 
-function carregarController() {
-    $uriAux = parse_url($_SERVER['REQUEST_URI'])['path']; // pega o caminho da url, o path do uri
-    $controller = str_replace('/', '', $uriAux); // remove a barra do inicio
 
-    if(! $controller)$controller = "index"; // se o uri for vazio, atribui o valor padrão "index"
+$pathUri = parse_url($_SERVER['REQUEST_URI'])['path']; // pega o caminho da url, o path do uri
+$controller = str_replace('/', '', $pathUri); // remove a barra do inicio
 
-    //dd($controller); // imprime o caminho da url
+if (! $controller) $controller = "index"; // se o uri for vazio, atribui o valor padrão "index"
+
+//dd($controller); // imprime o caminho da url
 
 
-    // file_exists() verifica se o arquivo existe
-    if ( ! file_exists("controllers/{$controller}.controller.php")) {
+// file_exists() verifica se o arquivo existe
+if (! file_exists("controllers/{$controller}.controller.php")) {
 
-        http_response_code(404); // comunica com o browser o erro
-        echo "<h1>404 - Página não encontrada</h1>"; // imprime na tela
-        die();
-        // die() é uma função nativa do php que interrompe a execução do script
-        // e não imprime mais nada na tela do navegador depois disso
-    };
+    // função para mostrar o erro, e depois parar o script
+    abort(404);
+};
 
-    // adaptação do require 'views/template/app.php'; para o uso do controller
-    require "controllers/{$controller}.controller.php";
-}
+// adaptação do require 'views/template/app.php'; para o uso do controller
+require "controllers/{$controller}.controller.php";
 
-carregarController();
-
-?>

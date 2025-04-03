@@ -29,10 +29,15 @@ $livro = array_pop($filtrado);
 // ele pega o unico elemento e remove de filtrado. Isso evita erros pois se filtrado estiver
 // vazio ele retorna null
 
-$view = "livro"; // variavel que vai ser passada para o app.php, para ele saber qual view carregar
-require "views/template/app.php"; // importa o app.php, que é o template do site
+//$view = "livro"; // variavel que vai ser passada para o app.php, para ele saber qual view carregar
+//require "views/template/app.php"; // importa o app.php, que é o template do site
 // O visual esta em livro.view.php, que é carregado pelo app.php através da variavel $view, que 
 // é quem decide o caminho do que é carregado la em app.php, e depois o código é jogado aqui com
 // require "views/template/app.php";
+
+// refatorando linha 32-36
+view('livro', ['livro' => $livro]); // chama uma função que faz o mesmo
+
+// o paremetro ['livro' => $livro]
 
 ?>

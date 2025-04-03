@@ -16,11 +16,11 @@
 
             <ul class="flex space-x-4 font-bold">
                 <li><a href="/" class="text-emerald-600">Explorar</a></li>
-                <li><a href="/meus-livros.php" class="hover:underline">Meus Livros</a></li>
+                <li><a href="/meus-livros" class="hover:underline">Meus Livros</a></li>
             </ul>
 
             <ul>
-                <li><a href="/login.php" class="hover:underline">Fazer Login</a></li>
+                <li><a href="/login" class="hover:underline">Fazer Login</a></li>
             </ul>
         </nav>
     </header>
