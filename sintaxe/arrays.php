@@ -62,3 +62,6 @@ var_dump($arrayDesordenado);
 // é uma função que retornará o menor valor do array
 echo "\n\nfunção min(): ". min($arrayDesordenado);
 
+
+// mais funções para manipulações de arrays https://www.php.net/manual/en/ref.array.php
+
