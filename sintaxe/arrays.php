@@ -10,9 +10,7 @@
     // arrayComum = [2, 3, 4]
     //var_dump($arrayComum);
 
-    // Tambem vazio, mas sera usado de outra forma
-    $arrayNomeado = [];
-
+    // Tambem vazio, mas sera usado de outra forma (array associativo)
     $arrayNomeado = [];
     $arrayNomeado["nome"] = "alberto";
     $arrayNomeado["idade"] = 40;
@@ -21,17 +19,17 @@
     //arrayNomeado = ["nome" => "alberto", "idade" => 40]
     //var_dump($arrayNomeado);
 
-    // Fazendo o mesmo tipo array manualmente na atribuição
+    // Fazendo o mesmo tipo array (array associativo) manualmente na atribuição
     $arrayNomeado2 = ["nome" => "Maria", "idade" => 39];
     //var_dump($arrayNomeado2);
 
-    // função nativa que retorna o número de elementos de um array
+    // count() é uma função nativa que retorna o número de elementos de um array
     //echo "número de elementos do arrayNomeado2: ". count($arrayNomeado2);
 
 
     $numeros = ["um", "dois", "tres", "quatro"];
 
-    // Função feita para percorrer arrays, entre outros:
+    // foreach() é uma função feita para percorrer arrays (pode ser usado em outras estruturas também):
     foreach($numeros as $numero){
         echo '$numero = '. $numero. "\n";
     }
@@ -39,9 +37,8 @@
     // Será chamado de $numero cada um dos elementos de $numeros, pois $numero
     // percorrerá cada um dos elementos de $numeros, como se fosse $numeros indexado
 
-    // função nativa array_sum():
+    // array_sum() é uma função nativa que retorna a soma de todos os elementos de um array
     //echo "soma do arrayComum [2, 3, 4]  =  ". array_sum($arrayComum) ."\n";
-    // retorna a soma de todos os elementos de um array
 
 
 
