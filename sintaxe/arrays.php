@@ -17,12 +17,31 @@
     $arrayNomeado["nome"] = "alberto";
     $arrayNomeado["idade"] = 40;
 
+    // array associativos em php
     //arrayNomeado = ["nome" => "alberto", "idade" => 40]
     //var_dump($arrayNomeado);
 
     // Fazendo o mesmo tipo array manualmente na atribuição
     $arrayNomeado2 = ["nome" => "Maria", "idade" => 39];
-    var_dump($arrayNomeado2);
+    //var_dump($arrayNomeado2);
+
+    // função nativa que retorna o número de elementos de um array
+    //echo "número de elementos do arrayNomeado2: ". count($arrayNomeado2);
+
+
+    $numeros = ["um", "dois", "tres", "quatro"];
+
+    // Função feita para percorrer arrays, entre outros:
+    foreach($numeros as $numero){
+        echo '$numero = '. $numero. "\n";
+    }
+    // $numeros as $numero significa que:
+    // Será chamado de $numero cada um dos elementos de $numeros, pois $numero
+    // percorrerá cada um dos elementos de $numeros, como se fosse $numeros indexado
+
+    // função nativa array_sum():
+    //echo "soma do arrayComum [2, 3, 4]  =  ". array_sum($arrayComum) ."\n";
+    // retorna a soma de todos os elementos de um array
 
 
 
