@@ -17,3 +17,7 @@ Esse repositório possui a ideia do "Efeito Protégé" ou "Técnica de Feynman" 
 
 
 - Estrutura de dados
+
+***
+
+*Para uma necessidade mais detalhada e acertiva: [Manual do PHP](https://www.php.net/manual/pt_BR/index.php)*
