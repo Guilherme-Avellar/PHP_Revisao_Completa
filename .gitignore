@@ -1,0 +1,48 @@
+# ---------------------
+# PhpStorm / JetBrains
+# ---------------------
+.idea/
+*.iml
+
+# ---------------------
+# Sistema Operacional
+# ---------------------
+.DS_Store
+Thumbs.db
+
+# ---------------------
+# PHP / Composer
+# ---------------------
+vendor/
+composer.lock
+
+# ---------------------
+# Logs e arquivos temporários
+# ---------------------
+*.log
+*.tmp
+*.swp
+
+# ---------------------
+# Arquivos de ambiente
+# ---------------------
+.env
+.env.local
+.env.*
+
+# ---------------------
+# Cache
+# ---------------------
+.cache/
+.cache-loader/
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# ---------------------
+# Outras extensões comuns
+# ---------------------
+*.sublime-workspace
+*.sublime-project
+*.bak
+*.orig
