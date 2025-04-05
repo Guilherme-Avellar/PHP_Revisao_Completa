@@ -30,6 +30,14 @@ echo "\nsoma3 2 + 0 = ". soma3(2);
 echo "\nsoma4 2.2 + 3 = ". soma4(2.2, 3);
 
 
+// para uma função receber uma referencia da variavel passada usa-se o &, muito parecido com ponteiros do C:
+function somarDois(&$x) {
+    $x += 2;
+}
+
+$variavelQualquer = 0;
+somarDois($variavelQualquer);
+echo "\n\nVariavel Qualquer = ".$variavelQualquer."\n\n";
 
 
 
