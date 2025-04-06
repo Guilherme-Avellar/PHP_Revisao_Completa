@@ -1,0 +1,14 @@
+{
+  "name": "vendor_name/exemplo2_composer_e_buscador",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "gui",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+  }
+}
