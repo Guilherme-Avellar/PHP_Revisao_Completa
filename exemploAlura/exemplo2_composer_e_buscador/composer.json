@@ -7,5 +7,16 @@
     "guzzlehttp/guzzle": "^7.9",
     "symfony/dom-crawler": "^7.2",
     "symfony/css-selector": "^7.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Automatiza\\Buscador\\" : "src/"
+    },
+    "classmap": [
+      "./ClasseAutoloadTeste.php"
+    ],
+    "files": [
+      "./FuncoesAutoloadTeste.php"
+    ]
   }
 }

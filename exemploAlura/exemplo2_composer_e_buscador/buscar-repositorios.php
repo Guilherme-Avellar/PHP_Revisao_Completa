@@ -3,16 +3,26 @@
 // O autoload.php, é um arquivo feito pelo composer responsável por realizar o autoload de classes, eliminando
 // a necessidade de require para os arquivos do /vendor, mas ainda exigindo o use, para importar as classes
 require 'vendor/autoload.php';
-// É possível fazer esse tipo de arquivo manualmente, mas o composer já nos trás pronto
+// É possível fazer esse tipo de arquivo manualmente, mas o composer já nos trás pronto. inclusive é possível
+// adicionar arquivos feitos mannualmente por nós a esse autoload que o composer fornece
 
-// classe feita manualmente
-require 'src/BuscadorRepositorios.php';
+// classe feita manualmente. Não precisa mais importa-la com require, pois foi configurado o autoload no composer.json
+//require 'src/BuscadorRepositorios.php';
+use Automatiza\Buscador\BuscadorRepositorios;
+
+// OBS: para o autoload funcionar depois de configurado, precisa ainda rodar no terminal: composer dumpautoload
 
 //O pacotes guzzlehttp/guzzle serve para executar requisições HTTP de alto nível
 
 use GuzzleHttp\Client;
 use Symfony\Component\DomCrawler\Crawler;
-use Automatiza\Buscador\BuscadorRepositorios;
+
+
+// teste de autoload manual ClasseAutoloadTeste.php e FuncoesAutoloadTeste.php
+olaMundo();
+ClasseAutoloadTeste::olaMundo();
+exit(); // para a execução do programa
+// OBS: Precisa usar o comando: composer dumpautoload, depois de ter configurado o composer.json
 
 
 $client = new Client(['base_uri' => 'https://github.com']);
