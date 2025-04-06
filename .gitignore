@@ -13,8 +13,7 @@ Thumbs.db
 # ---------------------
 # PHP / Composer
 # ---------------------
-vendor/
-composer.lock
+**/vendor/
 
 # ---------------------
 # Logs e arquivos temporários
