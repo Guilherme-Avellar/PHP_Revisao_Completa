@@ -1,14 +1,11 @@
 {
-  "name": "vendor_name/exemplo2_composer_e_buscador",
-  "description": "description",
+  "name": "guilherme-avellar/exemplo2_composer_e_buscador",
+  "description": "estudo sobre composer",
   "minimum-stability": "stable",
   "license": "proprietary",
-  "authors": [
-    {
-      "name": "gui",
-      "email": "email@example.com"
-    }
-  ],
   "require": {
+    "guzzlehttp/guzzle": "^7.9",
+    "symfony/dom-crawler": "^7.2",
+    "symfony/css-selector": "^7.2"
   }
 }
