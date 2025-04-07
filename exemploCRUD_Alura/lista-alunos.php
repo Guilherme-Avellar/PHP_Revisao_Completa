@@ -24,7 +24,7 @@ foreach ($studentDataList as $studentData) {
     );
 }
 
-//var_dump($studentList);
+var_dump($studentList);
 
 
 
@@ -52,6 +52,8 @@ while ($oneStudent = $statementOne->fetch(PDO::FETCH_ASSOC)) {
 // por que esse while? Para não ocupar memória, ele pega a informação do BD, faz o que tem que ser feito dentro de 1
 // loop e joga o objeto fora na próxima interação com o loop, não ocupando memória com infinitos objetos, e usando 1 por
 // vez a cada loop.
+// Ou seja em relação a tabela do BD o fetch retorna uma linha da tabela, enquanto o fetchAll retorna um array com todas
+// as linhas do SELECT da tabela.
 // E como sai do while? O PDO::FETCH_ASSOC que é o que a variavel $oneStudent esta utilizando, quando termina de
 // percorrer uma informação, ele coloca o "cursor" na próxima informação, e se for chamado novamente da mesma forma
 // ele lê apartir do "cursor" posto por ele mesmo, com o while executrando isso toda hora ele percorre o array inteiro,
