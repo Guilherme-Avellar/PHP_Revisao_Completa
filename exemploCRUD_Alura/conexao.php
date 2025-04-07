@@ -9,10 +9,12 @@
 // mais informações em https://www.php.net/manual/en/book.pdo.php
 
 // variavel que guardara uma strig com o endereço do arquivo
-$databasePath = __DIR__ . '/banco.sqlite';
+//$databasePath = __DIR__ . '/banco.sqlite';
 
 // Nesse exemplo usaremos apenas o primeiro parametro, para um exemplo introdutório
-$pdo = new PDO('sqlite:' . $databasePath);
+//$pdo = new PDO('sqlite:' . $databasePath);
+
+$pdo = \Alura\Pdo\Infrastructure\Persistence\ConnectionCreator::createConnection();
 
 echo "\nconectei\n\n";
 

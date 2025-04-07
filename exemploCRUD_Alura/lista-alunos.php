@@ -3,8 +3,7 @@
 use Alura\Pdo\Domain\Model\Student;
 require_once 'vendor/autoload.php';
 
-$databasePath = __DIR__ . '/banco.sqlite';
-$pdo = new PDO('sqlite:' . $databasePath);
+$pdo = \Alura\Pdo\Infrastructure\Persistence\ConnectionCreator::createConnection();
 
 // para se fazer uma query no banco usa-se o query() do obj PDO instanciado com o comando SQL que se quer. Ou seja
 // guarda o comando SQL em uma variavel para ser usado depois

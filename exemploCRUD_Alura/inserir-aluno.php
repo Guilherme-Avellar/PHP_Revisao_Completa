@@ -7,7 +7,10 @@ require_once 'vendor/autoload.php';
 $databasePath = __DIR__ . '/banco.sqlite';
 
 // Nesse exemplo usaremos apenas o primeiro parametro, para um exemplo introdutório
-$pdo = new PDO('sqlite:' . $databasePath);
+//$pdo = new PDO('sqlite:' . $databasePath);
+
+// Para reutilizar o mesmo código, foi feito uma classe para agilizar:
+$pdo = \Alura\Pdo\Infrastructure\Persistence\ConnectionCreator::createConnection();
 
 // Instancia o objeto que vai ser usado para armazenamento do exemplo
 $student = new Student(
