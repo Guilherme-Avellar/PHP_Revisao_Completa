@@ -5,8 +5,6 @@ Alguns comandos úteis, utilizados nesse projeto:
 - composer install
 - composer update
 - composer require symfony/css-selector
-- composer require --dev phpunit/phpunit  *(instalar o phpunit em modo desenvolvedor)*
-- vendor\bin\phpunit --version *(versão 12.1.2)*
 
 
 *Obs: como o composer.json já está configurado, apenas um composer install é o sufciente*
