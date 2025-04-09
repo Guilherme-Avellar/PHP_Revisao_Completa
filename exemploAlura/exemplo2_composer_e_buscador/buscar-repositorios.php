@@ -15,6 +15,8 @@ use Automatiza\Buscador\BuscadorRepositorios;
 //O pacotes guzzlehttp/guzzle serve para executar requisições HTTP de alto nível
 
 use GuzzleHttp\Client;
+
+// Symfony é um framework, mas pode ser usado isolado como uma biblioteca, como nesse caso
 use Symfony\Component\DomCrawler\Crawler;
 
 
