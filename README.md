@@ -21,3 +21,5 @@ Esse repositório possui a ideia do "Efeito Protégé" ou "Técnica de Feynman" 
 ***
 
 *Para uma necessidade mais detalhada e acertiva: [Manual do PHP](https://www.php.net/manual/pt_BR/index.php)*
+
+*Não está completamente no formato de boas práticas: [PSR12](https://www.php-fig.org/psr/psr-12/)*
