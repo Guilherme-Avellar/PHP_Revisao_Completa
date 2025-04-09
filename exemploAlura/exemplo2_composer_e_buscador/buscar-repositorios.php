@@ -19,15 +19,18 @@ use Symfony\Component\DomCrawler\Crawler;
 
 
 // teste de autoload manual ClasseAutoloadTeste.php e FuncoesAutoloadTeste.php
-olaMundo();
-ClasseAutoloadTeste::olaMundo();
-exit(); // para a execução do programa
+//olaMundo();
+//ClasseAutoloadTeste::olaMundo();
+//exit(); // para a execução do programa
 // OBS: Precisa usar o comando: composer dumpautoload, depois de ter configurado o composer.json
 
 
 $client = new Client(['base_uri' => 'https://github.com']);
 $crawler = new Crawler();
 
+// Mesmo o Crawler sendo criado neste arquivo sem nada, ele é passado por referência para a classe.
+// Alterações feitas dentro da classe afetam o mesmo objeto aqui. Permetindo usa-los fora da classe
+// com as informções que foram manipuladas lá. (não é o caso desse exemplo, pois ele não é usado depois)
 $buscador = new BuscadorRepositorios($client, $crawler);
 
 // buscador() é a função feita manualmente. Ele executa a busca, que retorna o
